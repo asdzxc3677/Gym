@@ -6,12 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="./layout/header.jsp" flush="false"></jsp:include>
 <h1>지옥같은 헬스장에 오신걸 환영합니다.</h1>
-
+<c:if test="${sessionScope.loginId == null}">
+<a href="/member/save-form">헬창들아 여기서 회원가입 하세요 </a>
+</c:if>
 </body>
 </html>
