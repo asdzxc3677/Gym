@@ -11,4 +11,16 @@
     <select id="duplicate" parameterType="String" resultType="String">
         select memberId from member_Gym where memberId=#{memberId}
     </select>
+
+    <select id="login" parameterType="member" resultType="member">
+        select * from member_Gym where memberId=#{memberId} and memberPassword=#{memberPassword}
+    </select>
+
+    <select id="findAll" resultType="member">
+        select * from member_Gym
+    </select>
+
+    <select id="findById" parameterType="Long" resultType="member">
+        select * from member_Gym where id=#{id}
+    </select>
 </mapper>

@@ -50,7 +50,7 @@
                     checkResult.innerHTML = "멋진 아이디 입니다."
                     checkResult.style.color = "green";
                 }else {
-                    checkResult.innerHTML = "아이디가 중복됬잖어!! 뇌가 근육으로 가득찼냐"
+                    checkResult.innerHTML = "아이디가 중복됬잖어!! 뇌가 근육으로 가득찼습니까"
                     checkResult.style.color = "red";
                 }
             },
@@ -64,10 +64,10 @@
         const passCheck = document.getElementById("passwordCheck").value;
         const checkResult = document.getElementById("pw-check-result");
         if(memberPassword.length < 3) {
-            alert('입력한 글자가 3글자 이상이어야 합니다 머리나쁜녀석아');
+            alert('입력한 글자가 3글자 이상이어야 합니다 알겟습니까');
         }
         if( memberPassword != passCheck ) {
-            checkResult.innerHTML = "일치하지않습니다. 뇌에 근육만 가득찼노"
+            checkResult.innerHTML = "일치하지않습니다. 뇌에 근육만 가득찼습니까"
             checkResult.style.color = "red";
         } else{
             checkResult.innerHTML = "일치합니다 잘했습니다."

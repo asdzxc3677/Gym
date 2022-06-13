@@ -5,6 +5,8 @@ import com.its.boardMember.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberService {
 
@@ -26,5 +28,18 @@ public class MemberService {
         }else {
             return "no";
         }
+    }
+
+    public MemberDTO login(MemberDTO memberDTO) { //로그인
+        MemberDTO loginMember = memberRepository.login(memberDTO);
+        return loginMember;
+    }
+
+    public List<MemberDTO> findAll() { //관리자용 회원정보
+        return memberRepository.findAll();
+    }
+
+    public MemberDTO findById(Long id) { // ajax로 처리된 상세조회
+        return memberRepository.findById(id);
     }
 }
