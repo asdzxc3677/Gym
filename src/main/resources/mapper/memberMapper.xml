@@ -4,8 +4,8 @@
 
 <mapper namespace="Member">
     <insert id="save" parameterType="member">
-        insert into member_Gym(memberId,memberPassword,memberName,memberAge,memberPhone)
-            values (#{memberId},#{memberPassword},#{memberName},#{memberAge},#{memberPhone})
+        insert into member_Gym(memberId,memberPassword,memberName,memberBirth,memberGender,memberEmail,memberPhone)
+            values (#{memberId},#{memberPassword},#{memberName},#{memberBirth},#{memberGender},#{memberEmail},#{memberPhone})
     </insert>
 
     <select id="duplicate" parameterType="String" resultType="String">
@@ -29,6 +29,6 @@
     </delete>
 
     <update id="update" parameterType="member">
-        update member_Gym set memberName=#{memberName},memberAge=#{memberAge},memberPhone=#{memberPhone} where id=#{id}
+        update member_Gym set memberName=#{memberName},memberEmail=#{memberEmail},memberPhone=#{memberPhone} where id=#{id}
     </update>
 </mapper>

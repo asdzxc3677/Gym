@@ -29,9 +29,9 @@
             <p id="pw-check-result"></p>
             <input type="password" class="form-control mb-2" onblur="passCheck()" id="passwordCheck" placeholder="비밀번호 확인"><br>
             <input type="text" class="form-control mb-2" id="memberName" name="memberName" placeholder="이름"><br>
-            <input type="text" class="form-control mb-2" id="memberAge" name="memberBirth" placeholder="생년월일"><br>
-            <input type="text" class="form-control mb-2" id="memberGender" name="memberBirth" placeholder="성별"><br>
-            <input type="text" class="form-control mb-2" id="memberEmail" name="memberBirth" placeholder="이메일"><br>
+            <input type="text" class="form-control mb-2" id="memberBirth" name="memberBirth" placeholder="생년월일"><br>
+            <input type="text" class="form-control mb-2" id="memberGender" name="memberGender" placeholder="성별"><br>
+            <input type="text" class="form-control mb-2" id="memberEmail" name="memberEmail" placeholder="이메일"><br>
             <input type="text" class="form-control mb-2" id="memberPhone" name="memberPhone" placeholder="핸폰번호"><br>
             <input type="submit" value="Welcome to Hellchang">
         </form>

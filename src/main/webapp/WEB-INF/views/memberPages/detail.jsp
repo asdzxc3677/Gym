@@ -22,7 +22,9 @@
             <th>아이디</th>
             <th>비번</th>
             <th>이름</th>
-            <th>나이</th>
+            <th>생년월일</th>
+            <th>성별</th>
+            <th>이메일</th>
             <th>핸드폰번호</th>
             <th>정보수정</th>
             <th>삭제</th>
@@ -32,7 +34,9 @@
                <td>${member.memberId}</td>
                <td>${member.memberPassword}</td>
                <td>${member.memberName}</td>
-               <td>${member.memberAge}</td>
+               <td>${member.memberBirth}</td>
+               <td>${member.memberGender}</td>
+               <td>${member.memberEmail}</td>
                <td>${member.memberPhone}</td>
                 <td><button class="btn btn-outline-info" onclick="update()">정보수정</button> </td>
                 <td><button class="btn btn-primary" id="delete" onclick="deleteMember()">도망</button> </td>

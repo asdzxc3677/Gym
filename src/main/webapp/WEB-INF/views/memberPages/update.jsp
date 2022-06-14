@@ -19,7 +19,9 @@
     계정:<input type="text" name="memberId" value="${updateMember.memberId}" readonly><br>
     비번:<input type="text" name="memberPassword" id="pwConfirm" placeholder="비밀번호입력"><br>
     이름:<input type="text" name="memberName" value="${updateMember.memberName}"><br>
-    나이:<input type="text" name="memberAge" value="${updateMember.memberAge}"><br>
+    생년월일:<input type="text" name="memberBirth" value="${updateMember.memberBirth}"><br>
+    성별:<input type="text" name="memberGender" value="${updateMember.memberGender}"readonly><br>
+    이메일:<input type="text" name="memberEmail" value="${updateMember.memberEmail}"><br>
     전화번호:<input type="text" name="memberPhone" value="${updateMember.memberPhone}">
     <input type="button" class="btn btn-primary" onclick="memberUpdate()" value="정보수정">
 </form>

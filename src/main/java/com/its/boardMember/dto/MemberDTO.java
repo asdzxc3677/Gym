@@ -12,7 +12,7 @@ public class MemberDTO {
     private String memberId; //회원아이디
     private String memberPassword; //회원비번
     private String memberName; //회원이름
-    private int memberBirth; //생년월일 ('나이'에서 변경)
+    private String memberBirth; //생년월일 ('나이'에서 변경)
     private String memberGender; //성별 (추가)
     private String memberEmail; //이메일 (추가)
     private String memberPhone; //회원폰번호
