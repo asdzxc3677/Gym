@@ -33,4 +33,12 @@ public class MemberRepository {
     public MemberDTO findById(Long id) { // ajax로 처리된 상세조회
         return sql.selectOne("Member.findById",id);
     }
+
+    public int delete(Long id) { // 관리자용 회원삭제 처리
+        return sql.delete("Member.delete",id);
+    }
+
+    public int update(MemberDTO memberDTO) { //개인정보 수정
+        return sql.update("Member.update",memberDTO);
+    }
 }

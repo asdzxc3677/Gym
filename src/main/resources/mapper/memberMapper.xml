@@ -23,4 +23,12 @@
     <select id="findById" parameterType="Long" resultType="member">
         select * from member_Gym where id=#{id}
     </select>
+
+    <delete id="delete" parameterType="Long">
+        delete from member_Gym where id=#{id}
+    </delete>
+
+    <update id="update" parameterType="member">
+        update member_Gym set memberName=#{memberName},memberAge=#{memberAge},memberPhone=#{memberPhone} where id=#{id}
+    </update>
 </mapper>

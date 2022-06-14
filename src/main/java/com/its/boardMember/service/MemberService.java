@@ -42,4 +42,22 @@ public class MemberService {
     public MemberDTO findById(Long id) { // ajax로 처리된 상세조회
         return memberRepository.findById(id);
     }
+
+    public boolean delete(Long id) { // 관리자용 회원삭제 처리
+        int deleteResult = memberRepository.delete(id);
+        if (deleteResult > 0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean update(MemberDTO memberDTO) { //개인정보 수정
+        int updateResult = memberRepository.update(memberDTO);
+        if (updateResult > 0){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

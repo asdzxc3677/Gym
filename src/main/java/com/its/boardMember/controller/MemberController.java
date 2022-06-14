@@ -58,7 +58,7 @@ public class MemberController {
             return "memberPages/login";
         }
     }
-    @GetMapping("/logout")//로그아웃 처리
+    @GetMapping("/logout") //로그아웃 처리
     public String logout(HttpSession session){
         session.invalidate();
         return "index";
@@ -75,4 +75,39 @@ public class MemberController {
         MemberDTO memberDTO = memberService.findById(id);
         return memberDTO;
     }
+    @GetMapping("/detail") //개인회원정보
+    public String detail(HttpSession session,Model model){
+        Long id = (Long) session.getAttribute("id");
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member",memberDTO);
+        return "memberPages/detail";
+    }
+    @GetMapping("/delete")//관리자가 회원삭제 처리
+    public String delete(@RequestParam("id")Long id){
+        System.out.println("id = " + id);
+        boolean deleteResult = memberService.delete(id);
+        if (deleteResult){
+            return "redirect:/member/findAll"; // 관리자의 회원삭제 처리를 위해 findAll 주소에 이동하라는 명령
+        }else {
+            return "delete-falil";
+        }
+    }
+    @GetMapping("/update-form") //회원수정을 위해 회원정보창 띄우게 처리
+    public String updateForm(HttpSession session,Model model){
+        Long updateId = (Long) session.getAttribute("id");
+        System.out.println("updateId" + updateId);
+        MemberDTO memberDTO = memberService.findById(updateId);
+        model.addAttribute("updateMember",memberDTO);
+        return "memberPages/update";
+    }
+    @PostMapping("/update")//회원수정
+    public String update(@ModelAttribute MemberDTO memberDTO){
+        boolean updateResult = memberService.update(memberDTO);
+        if (updateResult){
+            return "redirect:/member/detail"; // 개인회원 수정처리 했을때 detail 로 보낸다.
+        }else {
+            return "memberPages/update-fail";
+        }
+    }
+
 }
