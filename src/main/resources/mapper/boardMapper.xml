@@ -3,5 +3,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Board">
+    <insert id="saveFile" parameterType="board">
+    insert into board_Gym
+        (boardWriter,boardPassword,boardTitle,boardContents,boardCreatedDate,boardFileName)
+        values (#{boardWriter},#{boardPassword},#{boardTitle},#{boardContents},now(),#{boardFileName})
+    </insert>
+
+    <select id="pagingList" parameterType="java.util.HashMap" resultType="board">
+        select * from board_follow order by id desc limit #{start}, #{limit}
+    </select>
 
 </mapper>

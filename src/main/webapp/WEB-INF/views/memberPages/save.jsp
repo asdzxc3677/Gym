@@ -37,6 +37,7 @@
             </div><br> <%-- 생년월일 처럼 input 막대기가 2개로 이쁘게 되려면  <div class="input-group"> 적어야된다. --%>
 
             <input type="text" class="form-control mb-2" id="memberGender" name="memberGender" placeholder="성별"><br>
+            <%-- 훗날 나중에 성별도 여자,남자 구분할수 잇는 버튼을 생성할 예정임 --%>
             <input type="text" class="form-control mb-2" id="memberEmail" name="memberEmail" placeholder="이메일"><br>
             <input type="text" class="form-control mb-2" id="memberPhone" name="memberPhone" placeholder="핸폰번호"><br>
             <input type="submit" value="Welcome to Hellchang">
