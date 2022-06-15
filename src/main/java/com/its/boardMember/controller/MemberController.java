@@ -53,7 +53,7 @@ public class MemberController {
             model.addAttribute("loginMember",loginMember); // model.addAttribute 는 가로안에 로그인 맴버의 정보를 가져간다는 내용
             session.setAttribute("loginId",loginMember.getMemberId());// session.setAttribute 로그인한 값을 session 통해서 모든페이지를 쓸수 있다.
             session.setAttribute("id",loginMember.getId());//아이디를 session 통해서  모든페이지에 적용시킬수 있다.
-            return "memberPages/main"; //훗날 "redirect:/board/paging"; 으로 이동 "redirect: Mapping 주소로 이동하는 명령어
+            return "redirect:/board/paging"; //훗날 "redirect:/board/paging"; 으로 이동 "redirect: Mapping 주소로 이동하는 명령어
         }else {
             return "memberPages/login";
         }

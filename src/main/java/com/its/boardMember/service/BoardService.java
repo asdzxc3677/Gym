@@ -43,10 +43,11 @@ public class BoardService {
     public PageDTO paging(int page) { // 전체 페이지수 및 페이지번호 처리부분 이다.
         int boardCount = boardRepository.boardCount();
         int maxPage = (int)(Math.ceil((double) boardCount / PAGE_LIMIT));
-        int startPage = (((int)(Math.ceil((double)page / BLOCK_LIMIT))) -1) * BLOCK_LIMIT + 1;
+        int startPage = (((int)(Math.ceil((double)page / BLOCK_LIMIT))) - 1) * BLOCK_LIMIT + 1;
         int endPage = startPage + BLOCK_LIMIT -1;
         if (endPage > maxPage)
             endPage = maxPage;
+
         PageDTO paging = new PageDTO();
         paging.setPage(page);
         paging.setStartPage(startPage);
@@ -54,4 +55,5 @@ public class BoardService {
         paging.setMaxPage(maxPage);
         return paging;
     }
+
 }

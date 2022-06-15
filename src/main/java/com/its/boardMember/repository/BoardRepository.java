@@ -20,7 +20,7 @@ public class BoardRepository {
         return sql.selectList("Board.pagingList",pagingParam);
     }
 
-    public int boardCount() { //전체 페이지수 및 페이지번호
+    public int boardCount() { // 전체 페이지수 및 페이지번호
         return sql.selectOne("Board.count");
     }
 }

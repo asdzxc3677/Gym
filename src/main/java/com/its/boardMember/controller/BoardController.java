@@ -17,8 +17,8 @@ import java.util.List;
 public class BoardController {
     @Autowired
     private BoardService boardService;
-//    @Autowired
-//    private CommentService commentService;
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping("/saveFile")// 파일첨부 글작성 화면 띄우기
     public String saveFileForm(){
@@ -29,12 +29,12 @@ public class BoardController {
         boardService.saveFile(boardDTO);
         return "redirect:/board/paging";
     }
-    @GetMapping("/paging") //페이지 처리
-    public String paging(@RequestParam(value = "page",required = false, defaultValue = "1") int page, Model model){
+    @GetMapping("/paging")  //페이징 처리
+    public String paging(@RequestParam(value = "page", required = false, defaultValue = "1") int page, Model model) {
         List<BoardDTO> boardList = boardService.pagingList(page);
         PageDTO paging = boardService.paging(page);
-        model.addAttribute("boardList",boardList);
-        model.addAttribute("paging",paging);
+        model.addAttribute("boardList", boardList);
+        model.addAttribute("paging", paging);
         return "boardPages/pagingList";
     }
 }
