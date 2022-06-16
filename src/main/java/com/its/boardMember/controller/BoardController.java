@@ -49,4 +49,33 @@ public class BoardController {
         model.addAttribute("commentList",commentDTOList);
         return "boardPages/detail";
     }
+    @GetMapping("/passwordCheck") //비밀번호 체크
+    public String passwordCheck(@RequestParam("id") Long id,Model model){
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("board",boardDTO);
+        return "boardPages/passwordCheck";
+    }
+    @GetMapping("/delete") //글 삭제(댓글삭제 포함)
+    public String delete(@RequestParam("id") Long id){
+        boardService.delete(id);
+        return "boardPages/pagingList";
+    }
+    @GetMapping("/update") //글 수정화면 요청
+    public String updateForm(@RequestParam("id")Long id,Model model){
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("boardUpdate",boardDTO);
+        return "boardPages/update";
+    }
+    @PostMapping("/update") //글수정처리
+    public String update(@ModelAttribute BoardDTO boardDTO){
+        boardService.update(boardDTO);
+        return "redirect:/board/detail?id=" + boardDTO.getId();
+    }
+    @GetMapping("/search")//글검색
+    public String search(@RequestParam("searchType") String searchType,
+                         @RequestParam("q") String q, Model model){ //jsp 파일의 q라는 이름값을 넣어서 q가 넣어졋다.
+        List<BoardDTO> searchList = boardService.search(searchType,q);
+        model.addAttribute("boardList",searchList);
+        return "boardPages/list";
+    }
 }

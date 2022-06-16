@@ -60,4 +60,20 @@ public class BoardService {
         boardRepository.updateHits(id); //조회수 증가
         return boardRepository.findById(id); // 상세정보 가져오기
     }
+
+    public void delete(Long id) { //글 삭제(댓글삭제 포함)
+        boardRepository.delete(id);
+    }
+
+    public void update(BoardDTO boardDTO) { //글수정처리
+        boardRepository.update(boardDTO);
+    }
+
+    public List<BoardDTO> search(String searchType, String q) { //검색처리
+        Map<String,String> searchParam = new HashMap<>();
+        searchParam.put("type",searchType);
+        searchParam.put("q",q);
+        List<BoardDTO> searchList = boardRepository.search(searchParam);
+        return searchList;
+    }
 }
