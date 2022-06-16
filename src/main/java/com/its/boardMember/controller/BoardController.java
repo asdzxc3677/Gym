@@ -76,6 +76,6 @@ public class BoardController {
                          @RequestParam("q") String q, Model model){ //jsp 파일의 q라는 이름값을 넣어서 q가 넣어졋다.
         List<BoardDTO> searchList = boardService.search(searchType,q);
         model.addAttribute("boardList",searchList);
-        return "boardPages/list";
+        return "boardPages/pagingList";
     }
 }
