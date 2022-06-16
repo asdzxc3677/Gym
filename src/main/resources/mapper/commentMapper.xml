@@ -11,4 +11,8 @@
         insert into comment_Gym(commentWriter,commentContents,commentCreatedDate,boardId)
         values (#{commentWriter},#{commentContents},now(),#{boardId})
     </insert>
+
+    <delete id="delete" parameterType="Long">
+        delete from comment_Gym where id=#{id}
+    </delete>
 </mapper>

@@ -18,4 +18,8 @@ public class CommentRepository {
     public void save(CommentDTO commentDTO) { //댓글등록
         sql.insert("Comment.save",commentDTO);
     }
+
+    public List<CommentDTO> delete(Long boardId) { //댓글삭제
+        return sql.selectList("Comment.delete",boardId);
+    }
 }
