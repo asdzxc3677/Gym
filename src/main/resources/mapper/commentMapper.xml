@@ -8,7 +8,7 @@
     </select>
 
     <insert id="save" parameterType="comment">
-        insert into comment_Gym(commentWriter,commentContents,commentCreateDate,boardId)
+        insert into comment_Gym(commentWriter,commentContents,commentCreatedDate,boardId)
         values (#{commentWriter},#{commentContents},now(),#{boardId})
     </insert>
 </mapper>

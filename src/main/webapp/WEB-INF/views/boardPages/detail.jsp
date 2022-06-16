@@ -19,6 +19,7 @@
             max-width: 600px;
         }
     </style>
+
 </head>
 <body>
 <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
@@ -29,39 +30,39 @@
             <th>글번호</th>
             <th>제목</th>
             <th>작성자</th>
-            <th>비밀번호</th>
+            <th>비밀번호:</th>
             <th>내용</th>
             <th>작성일자</th>
             <th>조회수</th>
         </tr>
         <tr>
-            <td>${board.id}</td>
+            <td>${board.id} </td>
             <td>${board.boardTitle}</td>
-            <td>${board.boardWriter}</td>
+            <td>${board.boardWriter} </td>
             <td>${board.boardPassword}</td>
-            <td>${board.boardContents}</td>
-            <td>${board.boardCreatedDate}</td>
-            <td>${board.boardHits}</td>
+            <td>${board.boardContents} </td>
+            <td>${board.boardCreatedDate} </td>
+            <td>${board.boardHits} </td>
             <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
                  alt="" height="100" width="100">
-            <c:if test="${sessionScope.loginId == 'admin'}"> <%-- 관라자만 수정 삭제 할수 있게 처리 --%>
-                <td><button onclick="boardUpdate()">수정</button> </td>
-                <td><button onclick="boardDelete()">삭제</button> </td>
+            <c:if test="${sessionScope.loginId =='admin'}"> <%-- 관라자만 수정 삭제 할수 있게 처리 --%>
+                <td><button onclick="boardUpdate()">수정</button></td>
+                <td><button onclick="boardDelete()">삭제</button></td>
             </c:if>
             <c:if test="${board.boardWriter == sessionScope.loginId}"> <%-- 개인이 로그인 했을때에만 수정,삭제처리 --%>
-                <td><button onclick="boardUpdate()">수정</button> </td>
-                <td><button onclick="boardDelete()">삭제</button> </td>
+                <td><button onclick="boardUpdate()">수정</button></td>
+                <td><button onclick="boardDelete()">삭제</button></td>
             </c:if>
-            <td><button onclick="paging()">페이지목록</button> </td>
+            <td><button onclick="paging()">페이징목록</button></td>
         </tr>
     </table>
 </div>
 <div class="container mt-5"> <%-- 댓글작성 기능 --%>
     <div id="comment-write" class="input-group mb-3">
         <div class="form-floating">
-            <input type="text" id="commentWrite" class="form-control"
+            <input type="text" id="commentWriter" class="form-control"
                    value="${sessionScope.loginId}" readonly> <%-- 로그인한 값을 작성자에게 자동입력!  --%>
-            <label for="commentWrite">작성자</label>
+            <label for="commentWriter">작성자</label>
         </div>
         <div class="form-floating">
             <input type="text" id="commentContents" class="form-control" placeholder="내용">
@@ -89,7 +90,7 @@
                         <td><button onclick="commentDelete('${comment.id}')">삭제</button></td>
                     </c:if>
 
-                    <c:if test="${comment.comment.commentWriter == sessionScope.loginId}"> <%-- 본인이 쓴 댓글만 삭제할수 있게 처리 --%>
+                    <c:if test="${comment.commentWriter == sessionScope.loginId}"> <%-- 본인이 쓴 댓글만 삭제할수 있게 처리 --%>
                         <td><button onclick="commentDelete('${comment.id}')">삭제</button></td>
                     </c:if>
                 </tr>
@@ -104,7 +105,7 @@
         //댓글 작성자, 내용 가져오기
         //ajax 문법을 활용 /comment/save 주소로 post 방식으로 작성자,내용,글번호 이렇게 활용
         //alert 사용
-        const cWriter = document.getElementById("commentWrite").value;
+        const cWriter = document.getElementById("commentWriter").value;
         const cContents = $("#commentContents").val();
         const boardId = '${board.id}';
         $.ajax({
@@ -175,6 +176,7 @@
                 output += "<th>댓글삭제</th></tr>";
                 for (let i in result){
                     output += "<tr>";
+
                     output += "<td>"+result[i].id+"</td>";
                     output += "<td>"+result[i].commentWriter+"</td>";
                     output += "<td>"+result[i].commentContents+"</td>";
