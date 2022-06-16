@@ -58,7 +58,7 @@
         $.ajax({
             type:"get", <%-- Mapping 타입 get 이냐 post 이느냐  --%>
             url:"detail-ajax", <%-- url 의미 주소값 --%>
-            data:{"id":id},  <%-- ajax의 데이터를 담는 과정?  --%>
+            data:{"id":id}, <%-- 서버로 넘겨줄 파라미터 --%>
             dataType:"json",  <%-- 데이터 타입 : json  --%>
             success:function (result){
                 let output = "<table class='table'>";

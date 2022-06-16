@@ -56,4 +56,8 @@ public class BoardService {
         return paging;
     }
 
+    public BoardDTO findById(Long id) {
+        boardRepository.updateHits(id); //조회수 증가
+        return boardRepository.findById(id); // 상세정보 가져오기
+    }
 }

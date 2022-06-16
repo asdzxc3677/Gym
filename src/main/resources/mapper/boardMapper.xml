@@ -14,7 +14,14 @@
     </select>
 
     <select id="count" resultType="int">
-        select count(id) from board_follow
+        select count(id) from board_Gym
     </select>
 
+    <update id="updateHits" parameterType="Long">
+        update board_Gym set boardHits = boardHits+1 where id=#{id}
+    </update>
+
+    <select id="findById" parameterType="Long" resultType="board">
+        select * from board_Gym  where id=#{id}
+    </select>
 </mapper>
