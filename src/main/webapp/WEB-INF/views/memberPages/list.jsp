@@ -15,7 +15,7 @@
 </head>
 <body>
 <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
-    <h2>헬창회원들 정보 list.jsp</h2>
+    <h2>헬린이 회원들 정보 list.jsp</h2>
     <a href="/">시작페이지로 이동</a><br>
     <div class="container">
         <table class="table">

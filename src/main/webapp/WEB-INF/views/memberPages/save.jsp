@@ -21,7 +21,7 @@
 <body>
 
 <div class="container">
-    <h2 class="display-4 fw-normal">헬창들 회원가입 페이지 save.jsp</h2>
+    <h2 class="display-4 fw-normal">헬린이들 회원가입 페이지 save.jsp</h2>
     <div class="py-5 text-center">
         <form action="/member/save" method="post">
             <input type="text" class="form-control mb-2" onblur="duplicateCheck()" id="memberId" name="memberId" placeholder="아이디"><br>
@@ -44,6 +44,13 @@
         </form>
     </div>
 </div>
+<style>
+    body{
+        background-image: url("/resources/img/KakaoTalk_20220617_165305124.jpg");
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
 </body>
 <script> <%-- 아이디중복체크 --%>
     const duplicateCheck = () =>{

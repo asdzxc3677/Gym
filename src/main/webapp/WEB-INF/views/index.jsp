@@ -17,7 +17,20 @@
 <jsp:include page="./layout/header.jsp" flush="false"></jsp:include>
 <h1>지옥같은 헬스장에 오신걸 환영합니다.</h1>
 <c:if test="${sessionScope.loginId == null}">
-<a href="/member/save-form">헬창들아 여기서 회원가입 하세요 </a>
+    <style>
+        body{
+            text-align: center;
+        }
+ h1{color: #bb2d3b;}
+    </style>
+<a href="/member/save-form">헬린이 들아 여기서 회원가입 하세요 </a>
 </c:if>
+<style>
+    body{
+        background-image: url("/resources/img/KakaoTalk_20220617_161827373.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>헬창 회원들 로그인창 login.jsp</h2>
+    <h2>헬린이 회원들 로그인창 login.jsp</h2>
     <div class="py-5 text-center">
         <form action="/member/login" method="post">
             <input class="form-control mb-2" type="text" name="memberId" placeholder="아이디">
@@ -27,5 +27,13 @@
         </form>
     </div>
 </div>
+<style>
+    body{
+        background-image: url("/resources/img/KakaoTalk_20220617_162459560.jpg");
+        background-size: 40% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
 </body>
 </html>
