@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+.ex_topMenu #wrapper {
+	padding-top: 97px;
+}
+
+.ex_topMenu .topMenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 10;
+}
+
+.ex_topMenu .topMenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 10;
+}
+
+.topMenu .navi {
+	background-color: #f7f7f7;
+}
+
+.topMenu .navi .title {
+	padding: 0 52px;
+}
+
+.topMenu .navi .sideMenu {
+	position: absolute;
+	top: 9px;
+	left: 8px;
+}
+
+.topMenu .navi .title h1 {
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.topMenu .navi ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.topMenu .navi .sideMenu ul li {
+	float: left;
+	padding-left: 4px;
+}
+
+.topMenu .navi .sideMenu_ico {
+	border: 0;
+	background: none;
+	color: #fff;
+	box-shadow: none;
+}
+
+.topMenu .navi .sideMenu_ico a {
+	background: url(../img/icon_sideMenu.png) no-repeat 50% 0;
+}
+
+.topMenu .navi .sideMenu_ico span {
+	position: absolute;
+	visibility: hidden;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.sideMenu_ico a, .sideMenu_ico button {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	background-size: 26px 1040px;
+	color: #000;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+.tent {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	z-index: 100;
+}
+
+.show_menu {width:100%; height:100%; overflow:hidden;}
+.show_menu #wrap_mobile {position:fixed; top:0; left:0; width:100%; height:100%; overflow:hidden;}
+.show_menu .blind {z-index:1200;}
+.sideMenu_lyr {display:none; position:absolute; top:0; left:0; height:100%; background-color:#fff; z-index:2000; box-shadow:2px 0 8px rgba(0, 0, 0, 0.5);}
+.sideMenu_lyr {position:absolute; z-index:2000; top:0; bottom:0; left:0; width:260px;} /* iScroll */
+.aside_lyr_close {display:none; position:absolute; top:15px; left:275px; width:19px; height:19px; background:url(../img/ico_cbtn_hd.png) -3px -289px; background-size:26px 338px; overflow:hidden; cursor:pointer; text-indent:-9999px; z-index:1100;}
+.sideMenu_lyr .aside_menu {position:absolute; width:100%; z-index:1100;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-transform:translateZ(0); -moz-transform:translateZ(0); -ms-transform:translateZ(0); -o-transform:translateZ(0); transform:translateZ(0);
+-webkit-touch-callout:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
