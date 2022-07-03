@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/mobile.css">
 
-<script type="text/javascript" src="/resources/js/jquery.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui-1.11.0.js"></script>
 <script type="text/javascript" src="/resources/js/common/commonUtil.js"></script>
 <script type="text/javascript" src="/resources/js/main/index.js"></script>
 <script type="text/javascript">
