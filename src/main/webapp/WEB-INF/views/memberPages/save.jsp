@@ -48,7 +48,7 @@
     body{
         background-image: url("/resources/img/KakaoTalk_20220617_165305124.jpg");
         background-size: 50% 100%;
-        background-repeat: no-repeat;
+        background-repeat: repeat-x;
     }
 </style>
 </body>

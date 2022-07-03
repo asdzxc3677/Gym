@@ -43,5 +43,6 @@
 	<c:if test="${sessionScope.loginId == null}">
 		<a href="/member/save-form">헬창들아 여기서 회원가입 하세요 </a>
 	</c:if>
+	<jsp:include page="./slideMenu.jsp" flush="false"></jsp:include>
 </body>
 </html>

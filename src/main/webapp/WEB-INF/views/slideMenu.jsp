@@ -6,10 +6,10 @@
 		<div class="account_info">
 			<div class="user">
 				<span class="photo">
-					<c:choose>
-						<c:when test="${not empty loginUserInfo.profileThumbnailImg}"><img src="${pageContext.request.contextPath}/service/file/fileView?fileUrl=${loginUserInfo.profileThumbnailImg}" alt=""></c:when>
-						<c:otherwise><img src="<spring:message code="imageServer"/>/resources/common/img/no_photo.gif" alt=""></c:otherwise>
-					</c:choose>
+<%--					<c:choose>--%>
+<%--						<c:when test="${not empty loginUserInfo.profileThumbnailImg}"><img src="${pageContext.request.contextPath}/service/file/fileView?fileUrl=${loginUserInfo.profileThumbnailImg}" alt=""></c:when>--%>
+<%--						<c:otherwise><img src="<spring:message code="imageServer"/>/resources/common/img/no_photo.gif" alt=""></c:otherwise>--%>
+<%--					</c:choose>--%>
 				</span>
 				<span class="name"><strong>${loginUserInfo.userName}</strong> ${loginUserInfo.posName}</span>
 				<span class="dept">${loginUserInfo.deptName}</span>
