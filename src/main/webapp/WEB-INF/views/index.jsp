@@ -31,7 +31,12 @@
 				</div>
 				<div class="sideMenu">
 					<ul>
-						<li id="sideMenu_btn"><span class="sideMenu_ico"><a href="#" class="emico_menu" onclick="javascript:return false;"><span></span></a></span></li>
+						<li id="sideMenu_btn"><span class="sideMenu_ico"><a href="#" onclick="javascript:return false;"><span></span></a></span></li>
+					</ul>
+				</div>
+				<div class="loginBtn">
+					<ul>
+						<li id="login_btn" style=""><span class="loginBtn_ico"><a href="#" onclick="javascript:return false;"><span></span></a></span></li>
 					</ul>
 				</div>
 			</div>
