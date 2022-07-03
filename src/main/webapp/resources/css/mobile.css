@@ -84,7 +84,7 @@ body {
 	line-height: 0;
 }
 
-.sideMenu_ico a, .sideMenu_ico button {
+.sideMenu_ico a, .sideMenu_ico button, .loginBtn_ico a, .loginBtn_ico button {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
@@ -120,3 +120,4 @@ body {
 -webkit-touch-callout:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
 .topMenu .navi .loginBtn {position:absolute; top:9px; right:8px;}
 .topMenu .navi .loginBtn ul li {float:left; padding-right:4px;}
+.topMenu .navi .loginBtn_ico a {background:url(../img/icon_loginBtn.png) no-repeat 50% 0;}
